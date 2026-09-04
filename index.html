@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TENDREL TIBETAN TERRIER</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        "Helvetica Neue",
+        "Hiragino Kaku Gothic ProN",
+        "Yu Gothic",
+        sans-serif;
+    color: #333;
+    background: #f7f6f2;
+    line-height: 1.9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   HAMBURGER
+========================= */
+
+.menu-button {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    z-index: 1001;
+
+    width: 58px;
+    height: 58px;
+
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.7);
+
+    background: rgba(30,30,30,0.35);
+    backdrop-filter: blur(6px);
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.menu-button span {
+    width: 23px;
+    height: 1px;
+    background: white;
+    transition: 0.3s;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.menu {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    background: rgba(35,35,35,0.97);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.4s;
+}
+
+.menu.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-inner {
+    text-align: center;
+    color: white;
+}
+
+.menu-inner a {
+    display: block;
+
+    margin: 22px 0;
+
+    font-size: 17px;
+    font-weight: 300;
+    letter-spacing: 0.18em;
+
+    transition: 0.3s;
+}
+
+.menu-inner a:hover {
+    opacity: 0.55;
+}
+
+.menu-inner .jp {
+    display: block;
+    margin-top: 2px;
+
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: #aaa;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    height: 100vh;
+    min-height: 650px;
+
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,0.18),
+            rgba(0,0,0,0.28)
+        ),
+        url("dog-photo.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: white;
+}
+
+.hero-title h1 {
+    font-size: clamp(45px, 8vw, 90px);
+    font-weight: 300;
+
+    letter-spacing: 0.22em;
+}
+
+.hero-title p {
+    margin-top: 8px;
+
+    font-size: clamp(14px, 2vw, 22px);
+    letter-spacing: 0.4em;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+    padding: 110px 30px;
+}
+
+.section-inner {
+    max-width: 850px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-title h2 {
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 0.16em;
+}
+
+.section-title p {
+    margin-top: 8px;
+
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    color: #888;
+}
+
+
+/* =========================
+   TENDREL
+========================= */
+
+.tendrel {
+    background: #f7f6f2;
+}
+
+.tendrel-text {
+    max-width: 720px;
+    margin: auto;
+
+    text-align: center;
+    font-size: 16px;
+}
+
+
+/* =========================
+   PHILOSOPHY
+========================= */
+
+.philosophy {
+    background: #ebe8e1;
+}
+
+.philosophy-text {
+    max-width: 760px;
+    margin: auto;
+
+    text-align: center;
+    font-size: 16px;
+}
+
+
+/* =========================
+   LEGAL
+========================= */
+
+.legal {
+    background: #f7f6f2;
+}
+
+.legal-table {
+    max-width: 720px;
+    margin: auto;
+}
+
+.legal-row {
+    display: flex;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #ddd9d1;
+}
+
+.legal-label {
+    width: 190px;
+    font-weight: 500;
+}
+
+.legal-value {
+    flex: 1;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 55px 20px;
+
+    background: #292929;
+    color: white;
+
+    text-align: center;
+}
+
+.footer-title {
+    font-size: 15px;
+    letter-spacing: 0.2em;
+}
+
+.footer-copy {
+    margin-top: 12px;
+
+    font-size: 10px;
+    color: #aaa;
+    letter-spacing: 0.1em;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .menu-button {
+        top: 18px;
+        right: 18px;
+
+        width: 52px;
+        height: 52px;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero-title h1 {
+        letter-spacing: 0.15em;
+    }
+
+    .hero-title p {
+        letter-spacing: 0.25em;
+    }
+
+    .section {
+        padding: 75px 22px;
+    }
+
+    .section-title {
+        margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+        font-size: 23px;
+    }
+
+    .tendrel-text,
+    .philosophy-text {
+        font-size: 15px;
+        text-align: left;
+    }
+
+    .legal-row {
+        display: block;
+    }
+
+    .legal-label {
+        width: auto;
+        margin-bottom: 5px;
+    }
+}
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HAMBURGER BUTTON
+========================= -->
+
+<button class="menu-button" onclick="toggleMenu()" aria-label="メニュー">
+
+    <span></span>
+    <span></span>
+    <span></span>
+
+</button>
+
+
+<!-- =========================
+     MENU
+========================= -->
+
+<div class="menu" id="menu">
+
+    <div class="menu-inner">
+
+        <a href="index.html" onclick="toggleMenu()">
+            HOME
+            <span class="jp">ホーム</span>
+        </a>
+
+        <a href="dogs.html">
+            OUR DOGS
+            <span class="jp">犬の紹介</span>
+        </a>
+
+        <a href="tibetan-terrier.html">
+            TIBETAN TERRIER
+            <span class="jp">チベタンテリアについて</span>
+        </a>
+
+        <a href="puppies.html">
+            PUPPIES
+            <span class="jp">仔犬情報</span>
+        </a>
+
+        <a href="instagram.html">
+            INSTAGRAM
+            <span class="jp">Instagram</span>
+        </a>
+
+        <a href="index.html#philosophy" onclick="toggleMenu()">
+            BREEDING PHILOSOPHY
+            <span class="jp">ブリーディングフィロソフィー</span>
+        </a>
+
+        <a href="index.html#tendrel" onclick="toggleMenu()">
+            TENDREL
+            <span class="jp">TENDRELの意味</span>
+        </a>
+
+        <a href="index.html#legal" onclick="toggleMenu()">
+            LEGAL INFORMATION
+            <span class="jp">法令に基づく表記</span>
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="hero">
+
+    <div class="hero-title">
+
+        <h1>TENDREL</h1>
+
+        <p>TIBETAN TERRIER</p>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     TENDRELの意味
+========================= -->
+
+<section class="section tendrel" id="tendrel">
+
+    <div class="section-inner">
+
+        <div class="section-title">
+
+            <h2>TENDREL</h2>
+
+            <p>THE MEANING OF TENDREL</p>
+
+        </div>
+
+
+        <div class="tendrel-text">
+
+            <p>
+                「TENDREL（テンドレル）」は、
+                チベット語で「縁起」を意味する言葉です。
+            </p>
+
+            <br>
+
+            <p>
+                すべてのものは独立して存在するのではなく、
+                さまざまなつながりと関わりの中で
+                今ここに存在しています。
+            </p>
+
+            <br>
+
+            <p>
+                人と犬との出会いもまた、
+                一つひとつの縁によって生まれるもの。
+            </p>
+
+            <br>
+
+            <p>
+                そのつながりを大切にしながら、
+                チベタンテリアとともに
+                歩んでいきたいと考えています。
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     BREEDING PHILOSOPHY
+========================= -->
+
+<section class="section philosophy" id="philosophy">
+
+    <div class="section-inner">
+
+        <div class="section-title">
+
+            <h2>BREEDING PHILOSOPHY</h2>
+
+            <p>ブリーディングフィロソフィー</p>
+
+        </div>
+
+
+        <div class="philosophy-text">
+
+            <p>
+                TENDRELでは、
+                チベタンテリアという犬種が本来持つ
+                身体的な特徴、健全性、気質、そして
+                その歴史を大切にしたブリーディングを
+                目指しています。
+            </p>
+
+            <br>
+
+            <p>
+                珍しさや流行だけを追い求めるのではなく、
+                犬種としての本質を見つめ、
+                一頭一頭の健康と健全な成長を大切にします。
+            </p>
+
+            <br>
+
+            <p>
+                長い歴史を持つチベタンテリアを
+                次の世代へつないでいくこと。
+                それがTENDRELの
+                ブリーディングに対する考え方です。
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LEGAL INFORMATION
+========================= -->
+
+<section class="section legal" id="legal">
+
+    <div class="section-inner">
+
+        <div class="section-title">
+
+            <h2>LEGAL INFORMATION</h2>
+
+            <p>法令に基づく表記</p>
+
+        </div>
+
+
+        <div class="legal-table">
+
+            <div class="legal-row">
+
+                <div class="legal-label">
+                    事業者名
+                </div>
+
+                <div class="legal-value">
+                    TENDREL
+                </div>
+
+            </div>
+
+
+            <div class="legal-row">
+
+                <div class="legal-label">
+                    事業所所在地
+                </div>
+
+                <div class="legal-value">
+                    登録後に記載
+                </div>
+
+            </div>
+
+
+            <div class="legal-row">
+
+                <div class="legal-label">
+                    動物取扱業登録番号
+                </div>
+
+                <div class="legal-value">
+                    登録後に記載
+                </div>
+
+            </div>
+
+
+            <div class="legal-row">
+
+                <div class="legal-label">
+                    動物取扱責任者
+                </div>
+
+                <div class="legal-value">
+                    登録後に記載
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-title">
+        TENDREL TIBETAN TERRIER
+    </div>
+
+    <div class="footer-copy">
+        © TENDREL Tibetan Terrier
+    </div>
+
+</footer>
+
+
+<script>
+
+function toggleMenu() {
+
+    const menu = document.getElementById("menu");
+
+    menu.classList.toggle("active");
+
+}
+
+</script>
+
+
+</body>
+</html>
