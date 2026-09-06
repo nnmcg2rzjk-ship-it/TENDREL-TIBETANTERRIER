@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MY DOG | TENDREL tibetan terrier（テンプレート）</title>
+  <link rel="preconnect" href="https://static.parastorage.com" crossorigin />
+  <!-- MONT / NAM の名前は Corben（元サイトと同じ書体） -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Corben:wght@400;700&display=swap" />
+  <link rel="stylesheet" href="fonts.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===================== ヘッダー ===================== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html" aria-label="TENDREL TIBETANTERRIER">
+        <img class="logo-img" src="images/logo.png" alt="TENDREL TIBETANTERRIER" />
+      </a>
+      <a class="contact-btn" href="#">お問い合わせ</a>
+      <button class="menu-btn" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="site-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="subpage subpage-mydog">
+      <div class="mydog-inner">
+        <div class="mydog-giorgia">
+          <figure class="mydog-giorgia-photo">
+            <img src="images/giorgia-mydog.png" alt="GIORGIA" />
+          </figure>
+          <a class="giorgia-card" href="giorgia.html">GIORGIA</a>
+        </div>
+
+        <div class="mydog-dogs">
+          <div class="dog">
+            <figure class="dog-photo">
+              <img src="images/mont.jpg" alt="MONT" />
+            </figure>
+            <div class="dog-info">
+              <p class="dog-name">MONT</p>
+              <p class="dog-date">2006/11/10</p>
+              <p class="dog-date">~2022/7/20</p>
+            </div>
+          </div>
+          <div class="dog">
+            <figure class="dog-photo">
+              <img src="images/nam.jpg" alt="NAM" />
+            </figure>
+            <div class="dog-info">
+              <p class="dog-name">NAM</p>
+              <p class="dog-date">2000/06/11</p>
+              <p class="dog-date">~2017/08/16</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== フッター ===================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a class="logo footer-logo" href="index.html" aria-label="TENDREL TIBETANTERRIER">
+        <img class="logo-img" src="images/logo.png" alt="TENDREL TIBETANTERRIER" />
+      </a>
+      <nav class="social-bar" aria-label="SNS">
+        <a class="social-icon" href="http://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+          <img src="images/facebook.svg" alt="Facebook" />
+        </a>
+        <a class="social-icon" href="http://www.instagram.com/tibetanterrier_perrito" target="_blank" rel="noopener" aria-label="Instagram">
+          <img src="images/instagram.svg" alt="Instagram" />
+        </a>
+      </nav>
+      <div class="copyright">
+        <p>© 2026 TENDREL TIBETAN TERRIER.</p>
+        <p>.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== ハンバーガーメニュー ===================== -->
+  <div class="menu-overlay" data-menu-close hidden></div>
+  <aside class="menu-drawer" id="site-menu" role="dialog" aria-modal="true" aria-label="サイト" aria-hidden="true">
+    <button class="menu-close" type="button" aria-label="メニューを閉じる" data-menu-close>
+      <span></span><span></span>
+    </button>
+    <nav class="menu-nav" aria-label="サイト">
+      <ul>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="home.html">チベタンテリアについて</a></li>
+        <li class="has-sub sub-open">
+          <div class="sub-row">
+            <a class="is-active" href="my-dog.html">MY DOG</a>
+            <button class="sub-toggle" type="button" aria-label="その他の MY DOG ページ" aria-expanded="true"></button>
+          </div>
+          <ul class="submenu">
+            <li><a href="giorgia.html">ジョージア</a></li>
+          </ul>
+        </li>
+        <li><a href="instagram.html">Instagram</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <script src="menu.js"></script>
+
+</body>
+</html>
