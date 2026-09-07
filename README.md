@@ -1,2 +1,0 @@
-# simpleweb
-web template demo
