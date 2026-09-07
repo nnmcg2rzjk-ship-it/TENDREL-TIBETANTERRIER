@@ -1,0 +1,13 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="準備中">
+  <rect width="400" height="400" fill="#ecece7"/>
+  <rect x="0.5" y="0.5" width="399" height="399" fill="none" stroke="#d7d7cf"/>
+  <g stroke="#8f8f85" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <line x1="148" y1="116" x2="252" y2="116"/>
+    <line x1="148" y1="284" x2="252" y2="284"/>
+    <path d="M166 116 L200 200 L234 116"/>
+    <path d="M166 284 L200 200 L234 284"/>
+  </g>
+  <path d="M182 136 H218 L200 182 Z" fill="#cdb27a"/>
+  <path d="M190 266 Q200 228 210 266 Z" fill="#cdb27a"/>
+  <line x1="200" y1="188" x2="200" y2="230" stroke="#cdb27a" stroke-width="5" stroke-linecap="round"/>
+</svg>

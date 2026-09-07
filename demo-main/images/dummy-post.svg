@@ -1,0 +1,9 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ダミー画像">
+  <rect width="400" height="400" fill="#ecece7"/>
+  <rect x="0.5" y="0.5" width="399" height="399" fill="none" stroke="#d7d7cf"/>
+  <g fill="none" stroke="#b7b7ad" stroke-width="10" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="120" y="120" width="160" height="160" rx="14"/>
+    <circle cx="168" cy="168" r="16"/>
+    <path d="M132 258l44-44 34 30 30-26 28 24"/>
+  </g>
+</svg>
